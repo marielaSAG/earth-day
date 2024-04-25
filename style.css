@@ -1,0 +1,418 @@
+html {
+	 scroll-behavior: smooth;
+}
+
+.navigation {
+	width: 100%;
+	display: flex;
+    /*position: relative;*/
+    /*flex-direction: row;*/
+    justify-content: center;
+	background-image: url(images/navigation_background.jpg);
+	
+	ul.list {
+		display: table;
+		height: 100%;
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		li {
+			height: 100%;
+			margin: 40px;
+			display: inline-table;
+			
+			a {
+				text-decoration: none;
+                font-size: 19px;
+                transform: translateY(0px);
+                transition: all .5s;
+                display: block;
+                font-weight: 600;
+				color: black;
+			}
+		}
+		
+		li:hover a {
+			transform: translateY(10px);
+		}
+	}
+	
+	@media only screen and (max-width: 1330px) {
+		ul.list {
+			display: none !important;
+		}
+	}
+	
+	img {
+        margin: 0 40px 0 40px;
+		height: 100px;
+	}
+}
+
+header {
+  width: 100%;
+  height: 590px;
+  background-image: url(images/header_image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  overflow: hidden;
+
+  h1 {
+    margin: auto;
+	padding: 1em 0 1em 0;
+    text-align: center;
+    color: white;
+    font-size: 55px;
+    text-shadow: 2px 2px #005aff;
+	position: relative;
+    top: 35%;
+  }
+  
+  img {
+	animation-name: example;
+	animation-duration: 3s;
+	display: block;
+    float: right;
+	left: -95px;
+    top: 60px;
+    position: relative;
+	opacity: 100%;
+  }
+}
+
+ 
+@keyframes example {
+  0%   {left: 119px; opacity: 0%;}
+  100% {left:-95px; opacity: 100%;}
+}
+
+
+
+.facts {
+  width: 100%;
+  height: 690px;
+  background-image: url(images/section_earth_day.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  overflow: hidden;
+  
+  h2 {
+	font-size: 50px;
+    /*position: relative;*/
+    /*top: 10%;*/
+    /*left: 200px;*/
+    padding: 1em 0em 0em 4em;
+    text-decoration: underline;
+	margin-bottom: -25px !important;
+  }
+  
+  p {
+	width: 50%;
+    font-size: 30px;
+    position: relative;
+    top: 70px;
+    left: 160px;
+	background-color: #ffe7e755;
+	text-align: justify;
+    padding: 40px;
+    border: 1px solid #d1c9c955;
+    border-radius: 75px;
+	z-index: 3;
+  }
+  
+  p:after {
+	content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-left-color: #ffe7e755;
+    border-right: 0;
+    border-bottom: 0;
+    margin-top: -26px;
+    margin-right: -70px;
+  }
+  
+  img {
+	position: relative;
+    bottom: 145px;
+    width: 480px;
+	//animation-name: example2;
+    //animation-duration: 3s;
+    display: block;
+    float: right;
+    left: -35px;
+    position: relative;
+    opacity: 100%;
+	z-index: 1;
+  }
+}
+  
+@keyframes example2 {
+  0%   {bottom: 0px; opacity: 0%;}
+  100% {bottom: 145px; opacity: 100%;}
+}  
+
+section article:nth-child(2) {
+    width: 100%;
+    height: 690px;
+    background-image: url(images/sustainable.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
+	
+	h2 {
+		font-size: 50px;
+		/*position: relative;*/
+		/*top: 70px;*/
+		/*left: 500px;*/
+		text-decoration: underline;
+		padding: 1em 0em 0em 9em;
+	}
+	
+	p {
+		/*width: 50%;*/
+		font-size: 30px;
+		/*position: relative;
+		/*top: 70px;*/
+		/*left: 500px;*/
+		padding: 0 5em 0 15em;
+	}
+}
+
+section article:nth-child(3) {
+    width: 100%;
+    height: 690px;
+    background-image: url(images/help.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
+	
+	h2 {
+		font-size: 50px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+        padding: 0em 0em 0em 4em;
+        text-decoration: underline;
+	}
+	
+	p, ul {
+		/*width: 80%;*/
+		font-size: 30px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+		padding: 0 5em 0 6.5em;
+	}
+	
+	ul {
+		
+		list-style: none;
+		
+		li {
+			margin-bottom: 15px;
+		}
+		
+		li:nth-child(1)::before {
+			content: '';
+			display: inline-block;
+			height: 65px;
+			width: 65px;
+			background-image: url(images/recycle.png);
+			background-size: cover;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+		
+		li:nth-child(2)::before {
+			content: '';
+			display: inline-block;
+			height: 65px;
+			width: 65px;
+			background-image: url(images/cleanup.png);
+			background-size: cover;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+		
+		li:nth-child(3)::before {
+			content: '';
+			display: inline-block;
+			height: 65px;
+			width: 65px;
+			background-image: url(images/electricity.png);
+			background-size: cover;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+		
+		li:nth-child(4)::before {
+			content: '';
+			display: inline-block;
+			height: 65px;
+			width: 65px;
+			background-image: url(images/plant.png);
+			background-size: cover;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+		
+		li:nth-child(5)::before {
+			content: '';
+			display: inline-block;
+			height: 65px;
+			width: 65px;
+			background-image: url(images/educate.png);
+			background-size: cover;
+			margin-right: 25px;
+			vertical-align: middle;
+		}
+	}
+}
+
+.action-call {
+	width: 100%;
+    height: 690px;
+    background-image: url(images/quiz.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
+	
+	h2 {
+		font-size: 50px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+        padding: 1em 0em 0em 4em;
+        text-decoration: underline;
+	}
+	
+	p {
+		width: 50%;
+		font-size: 30px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+		margin-bottom: 50px;
+		padding: 0 5em 0 6.5em;
+	}
+	
+	a {
+		position: relative;
+		top: 20px;
+		left: 200px;
+		text-decoration: none;
+        background-color: #fff;
+        border: 2px solid transparent;
+        color: #011f3d;
+        padding: 20px 25px;
+		font-size: 25px;
+	}
+	
+	a:hover {
+		background-color: transparent;
+        border: 2px solid #fff;
+	}
+}
+
+.testimonial {
+	width: 100%;
+    height: 690px;
+    background-image: url(images/Earth-Day-Quote.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
+	
+	h2 {
+		font-size: 50px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+        padding: 1em 0em 0em 4em;
+        text-decoration: underline;
+	}
+	
+	p:nth-child(2) {
+		/*width: 30%;*/
+		font-size: 30px;
+		/*position: relative;*/
+		/*top: 180px;*/
+        /*left: 820px;*/
+		padding: 4em 1em 0 27.5em;
+	}
+	
+	p:nth-child(3) {
+		/*width: 45%;*/
+		font-size: 30px;
+		/*position: relative;*/
+		/*top: 180px;*/
+        /*left: 820px;*/
+		padding: 2em 1em 1em 27.5em;
+	}
+	
+}
+
+div.events {
+	width: 100%;
+    height: 690px;
+    background-image: url(images/events.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    overflow: hidden;
+	
+	h2 {
+		font-size: 50px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+        padding: 1em 0em 0em 4em;
+        text-decoration: underline;
+	}
+	
+	p {
+		/*width: 50%;*/
+		font-size: 30px;
+		/*position: relative;*/
+		/*top: 20px;*/
+		/*left: 200px;*/
+		margin-bottom: 50px;
+		padding: 0 5em 0 6.5em;
+	}
+}
+
+footer {
+	width: 100%;
+	font-size: 20px;
+	display: flex;
+    position: relative;
+    justify-content: center;
+	background-image: url(images/navigation_background.jpg);
+	font-weight: 700;
+}
+
+.button-on-top {
+	background-image: url(images/arrow_up.png);
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+	
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 0px;
+	z-index: 99;
+	cursor: pointer;
+}
